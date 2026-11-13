@@ -1,0 +1,278 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #263445;
+}
+
+header {
+    background: #173b68;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8dc9ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #173b68, #2879bd);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: white;
+    color: #173b68;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 35px 8%;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.stat-card h2 {
+    color: #2879bd;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.report-section,
+.items-section {
+    margin: 30px auto;
+    padding: 30px;
+    width: 84%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.report-section h2,
+.items-section h2 {
+    margin-bottom: 25px;
+    color: #173b68;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form button {
+    background: #2879bd;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #173b68;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.filters input {
+    flex: 2;
+}
+
+.filters select {
+    flex: 1;
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.item-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #e9eef4;
+}
+
+.item-content {
+    padding: 18px;
+}
+
+.item-content h3 {
+    color: #173b68;
+    margin-bottom: 10px;
+}
+
+.item-content p {
+    margin: 7px 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: #e1efff;
+    color: #1761a0;
+}
+
+.status {
+    font-weight: bold;
+    color: #2879bd;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.card-buttons button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #2879bd;
+    color: white;
+}
+
+.card-buttons button:hover {
+    background: #173b68;
+}
+
+.card-buttons .delete-btn {
+    background: #d94343;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    background: #173b68;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-section,
+    .items-section {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+}

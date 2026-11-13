@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Lost and Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🎒 CampusFind</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#report">Report Item</a>
+        <a href="#items">Browse Items</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Lost Something on Campus?</h1>
+    <p>Find your belongings or help someone recover theirs.</p>
+    <a href="#report" class="hero-btn">Report an Item</a>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <h2 id="totalItems">0</h2>
+        <p>Total Reports</p>
+    </div>
+    <div class="stat-card">
+        <h2 id="lostItems">0</h2>
+        <p>Lost Items</p>
+    </div>
+    <div class="stat-card">
+        <h2 id="foundItems">0</h2>
+        <p>Found Items</p>
+    </div>
+    <div class="stat-card">
+        <h2 id="returnedItems">0</h2>
+        <p>Returned Items</p>
+    </div>
+</section>
+
+<section class="report-section" id="report">
+    <h2>Report Lost or Found Item</h2>
+
+    <form id="itemForm">
+        <label>Your Name</label>
+        <input type="text" id="reporter" required
+               placeholder="Enter your name">
+
+        <label>Item Name</label>
+        <input type="text" id="itemName" required
+               placeholder="Example: Wallet">
+
+        <label>Report Type</label>
+        <select id="itemType" required>
+            <option value="">Select report type</option>
+            <option value="Lost">Lost Item</option>
+            <option value="Found">Found Item</option>
+        </select>
+
+        <label>Category</label>
+        <select id="category" required>
+            <option value="">Select category</option>
+            <option>Electronics</option>
+            <option>School Supplies</option>
+            <option>Personal Belongings</option>
+            <option>Clothing</option>
+            <option>Others</option>
+        </select>
+
+        <label>Location</label>
+        <input type="text" id="location" required
+               placeholder="Where was it lost or found?">
+
+        <label>Date</label>
+        <input type="date" id="date" required>
+
+        <label>Description</label>
+        <textarea id="description" required
+                  placeholder="Describe the item..."></textarea>
+
+        <label>Upload Item Picture</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <button type="submit">Submit Report</button>
+    </form>
+</section>
+
+<section class="items-section" id="items">
+    <h2>Lost and Found Items</h2>
+
+    <div class="filters">
+        <input type="search" id="search"
+               placeholder="Search item name...">
+
+        <select id="filterType">
+            <option value="All">All Items</option>
+            <option value="Lost">Lost Items</option>
+            <option value="Found">Found Items</option>
+        </select>
+
+        <select id="filterStatus">
+            <option value="All">All Statuses</option>
+            <option value="Open">Open</option>
+            <option value="Claimed">Claimed</option>
+            <option value="Returned">Returned</option>
+        </select>
+    </div>
+
+    <div id="itemList" class="item-list"></div>
+</section>
+
+<footer>
+    <p>© 2026 CampusFind | Smart Campus Lost and Found System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
